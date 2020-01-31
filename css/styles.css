@@ -21,3 +21,25 @@ button {
 	height: 150px;
 	width: 150px;
 }
+
+.smallPizza {
+		border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #ffd867;
+    border: 10px solid #ffa600;
+}
+.mediumPizza {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: #ffd867;
+    border: 10px solid #ffa600;
+}
+.largePizza {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background: #ffd867;
+    border: 10px solid #ffa600;
+}
