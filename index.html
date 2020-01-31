@@ -23,66 +23,71 @@
     <div class="container-fluid menu">
       <div class="row">
         <div class="col-md-6">
-      		<h2>Pizza Options</h2>
-      		<h5>Click to add to your order</h5>
-      		<hr>
-      		<h3>Choose your pizza size:</h3>
-      		<div class="container-fluid sizes">
-        		<button class="smallPizza size" id="small">8"</button>
-        		<button class="mediumPizza size" id="medium">12"</button>
-        		<button class="largePizza size" id="large">14"</button>
-      		</div>
-        	<h3>Choose your pizza toppings:</h3>
-        	<div class="container-fluid toppings">
-        		<button class="btn btn-danger topping" id="pepperoni">
-        			<img src="img/pepperoni.png" alt="pepperoni">
-        		</button>
-        		<button class="btn btn-danger topping" id="bacon">
-        			<img src="img/bacon.png" alt="bacon">
-        		</button>       
-        		<button class="btn btn-danger topping" id="ham">
-        			<img src="img/ham.png" alt="ham">
-        		</button>
-        		<button class="btn btn-danger topping" id="tuna">
-        			<img src="img/tuna.png" alt="tuna">
-        		</button>
-        		<button class="btn btn-danger topping" id="mushroom">
-        			<img src="img/mushroom.png" alt="mushroom">
-        		</button>
-        		<button class="btn btn-danger topping" id="olives">
-        			<img src="img/black-olives.png" alt="olives">
-        		</button>
-        		<button class="btn btn-danger topping" id="onion">
-        			<img src="img/onion.png" alt="onion">
-        		</button>
-        		<button class="btn btn-danger topping" id="tomato">
-        			<img src="img/tomato.png" alt="tomato">
-        		</button>
-        		<button class="btn btn-danger topping" id="chili">
-        			<img src="img/chili.png" alt="chili">
-        		</button>
-        		<button class="btn btn-danger topping" id="green-pepper">
-        			<img src="img/green-pepper.png" alt="green pepper">
-        		</button>       
-        		<button class="btn btn-danger topping" id="red-pepper">
-        			<img src="img/red-pepper.png" alt="red-pepper">
-        		</button> 
-        		<button class="btn btn-danger topping" id="pineapple">
-        			<img src="img/pineapple.png" alt="pineapple">
-        		</button> 
-        		<button class="btn btn-danger topping" id="basil">
-        			<img src="img/basil.png" alt="basil">
-        		</button>
-        		<button class="btn btn-danger topping" id="egg">
-        			<img src="img/egg.png" alt="egg">
-        		</button>
-        		<button class="btn btn-danger topping" id="cheese">
-        			<img src="img/cheese.png" alt="cheese">
-        		</button>        		
-        		<button class="btn btn-danger topping" id="roquefort">
-        			<img src="img/roquefort.png" alt="roquefort">
-        		</button>        		
+      		<div class="container-fluid">
+	      		<h2>Pizza Options</h2>
+	      		<h5>Click to add to your order</h5>
+	      		<hr>
+	      		
+	      		<div class="container-fluid crustSizes">
+	      		<h3>First, choose your pizza size:</h3>
+	        		<button class="smallPizza size" id="small">8"</button>
+	        		<button class="mediumPizza size" id="medium">12"</button>
+	        		<button class="largePizza size" id="large">14"</button>
+	      		</div>	
         	</div>
+        	<div class="container-fluid toppings hidden">
+	        	<h3>Now, choose your pizza toppings:</h3>
+	        	<div class="container-fluid">
+	        		<button class="btn btn-danger topping" id="pepperoni" value="pepperoni">
+	        			<img src="img/pepperoni.png" alt="pepperoni">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="bacon" value="bacon">
+	        			<img src="img/bacon.png" alt="bacon">
+	        		</button>       
+	        		<button class="btn btn-danger topping" id="ham" value="ham">
+	        			<img src="img/ham.png" alt="ham">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="tuna" value="tuna">
+	        			<img src="img/tuna.png" alt="tuna">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="mushroom" value="mushroom">
+	        			<img src="img/mushroom.png" alt="mushroom">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="black-olives" value="black-olives">
+	        			<img src="img/black-olives.png" alt="black olives">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="onion" value="onion">
+	        			<img src="img/onion.png" alt="onion">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="tomato" value="tomato">
+	        			<img src="img/tomato.png" alt="tomato">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="chili" value="chili">
+	        			<img src="img/chili.png" alt="chili">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="green-pepper" value="green-pepper">
+	        			<img src="img/green-pepper.png" alt="green pepper">
+	        		</button>       
+	        		<button class="btn btn-danger topping" id="red-pepper" value="red-pepper">
+	        			<img src="img/red-pepper.png" alt="red-pepper">
+	        		</button> 
+	        		<button class="btn btn-danger topping" id="pineapple" value="pineapple">
+	        			<img src="img/pineapple.png" alt="pineapple">
+	        		</button> 
+	        		<button class="btn btn-danger topping" id="basil" value="basil">
+	        			<img src="img/basil.png" alt="basil">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="egg" value="egg">
+	        			<img src="img/egg.png" alt="egg">
+	        		</button>
+	        		<button class="btn btn-danger topping" id="cheese" value="cheese">
+	        			<img src="img/cheese.png" alt="cheese">
+	        		</button>        		
+	        		<button class="btn btn-danger topping" id="roquefort" value="roquefort">
+	        			<img src="img/roquefort.png" alt="roquefort">
+	        		</button>        		
+	        	</div>
+	        </div>
         </div>
         <div class="col-md-6">
         	<h2>Your Pizza</h2>
@@ -94,7 +99,7 @@
         		<button class="hidden mediumPizza size selected" id="your-medium" value="medium">12"</button>
         		<button class="hidden largePizza size selected" id="your-large" value="large">14"</button>
 	        </div>
-	        
+	        <div id="your-toppings"></div>
   				<button id="order" type="button" class="btn btn-danger round hidden" data-toggle="modal" data-target="#myModal">Order this pizza?</button>
         </div>
       </div>
