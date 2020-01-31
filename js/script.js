@@ -15,12 +15,16 @@ Pizza.prototype.baseCost = function(pizza) {
 		pizza.price = 24;
 	}
 	console.log("pizzaCost: " + pizza.price);
-	
 }
 
-// Push toppings into toppings array
-
-// Determine price of pizza with toppings
+// Push toppings into pizza toppings array
+Pizza.prototype.addTopping = function(pizza, topping) {
+	var topping = topping;
+	pizza.toppings.push(topping);
+	pizza.price += 1;
+	console.log("topping: " + topping);
+	console.log("pizza.toppings: " + pizza.toppings);
+}
 
 // Output total pizza cost to the DOM
 Pizza.prototype.showCost = function(pizza) {
@@ -29,13 +33,22 @@ Pizza.prototype.showCost = function(pizza) {
 
 // User Logic
 $(document).ready(function() {
+	var pizza = undefined;
+
+	// User selects pizza size
 	$(".size").click(function() {
-		event.preventDefault();
 		var pizzaSize = event.target.id;
-		var pizza = new Pizza(pizzaSize);
+		pizza = new Pizza(pizzaSize);
 		pizza.baseCost(pizza);
 		pizza.showCost(pizza);
-		
+	});
+
+	// User selects pizza toppings
+	$(".topping").click(function() {
+		var topping = event.target.id;
+		console.log("topping: " + topping);
+		pizza.addTopping(pizza, topping);
+		pizza.showCost(pizza);
 	});
 
 
