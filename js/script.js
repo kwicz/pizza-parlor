@@ -17,7 +17,6 @@ Pizza.prototype.baseCost = function(pizza, pizzaSize) {
 	} else {
 		pizza.sizePrice = 24;
 	}
-	pizza.totalPrice = pizza.sizePrice + pizza.toppingsPrice;
 	pizza.showCost(pizza);
 }
 
@@ -42,8 +41,7 @@ Pizza.prototype.removeSize = function(pizza, size) {
 Pizza.prototype.addTopping = function(pizza, topping) {
 	var topping = topping;
 	pizza.toppings.push(topping);
-	pizza.toppingsPrice += 1;
-	pizza.totalPrice += pizza.toppingsPrice;
+	pizza.toppingsPrice++;
 	pizza.showCost(pizza);
 }
 
@@ -56,12 +54,9 @@ Pizza.prototype.displayTopping = function(topping) {
 
 // Output total pizza cost to the DOM
 Pizza.prototype.showCost = function(pizza) {
-	if (pizza.sizePrice = 0) {
-		alert("Choose pizza size first!");
-	} else {
-		$("#results").html("$" + pizza.totalPrice + ".00");
-		$("#order").removeClass("hidden");
-	}
+	pizza.totalPrice = pizza.sizePrice + pizza.toppingsPrice;
+	$("#results").html("$" + pizza.totalPrice + ".00");
+	$("#order").removeClass("hidden");
 }
 
 // User Logic
