@@ -15,39 +15,28 @@
 	<div class="container-fluid">
 		<br>
 		<div class="jumbotron">
-			<h1>Pizza Parlor</h1>
+			<h1>Pizza.eat(slice)</h1>
 		</div>
 
     <div class="container menu">
       <div class="row">
         <div class="col-md-6">
-          <form>
-            <div class="form-group">Pizza Size
-              <select id="pizza-size">
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-              </select>
-            </div>
-            <div class="form-group toppings">Pizza Toppings
-	            <div class="form-check">
-	              <input type="checkbox" class="form-check-input">Pepperoni</input>
-	            </div>
-	            <div class="form-check">
-	              <input type="checkbox" class="form-check-input">Mushrooms</input>
-	            </div>
-	            <div class="form-check">
-	              <input type="checkbox" class="form-check-input">Olives</input>
-	            </div>
-	            <div class="form-check">
-	              <input type="checkbox" class="form-check-input">Onions</input>
-	            </div>
-	          </div>
-            <button class="btn btn-info" type="submit">Order</button>
-          </form>
+      		<h2>Choose your pizza size!</h2>
+      		<div class="container sizes">
+        		<button class="btn btn-info size" id="small">small</button>
+        		<button class="btn btn-info size" id="medium">medium</button>
+        		<button class="btn btn-info size" id="large">large</button>
+      		</div>
+        	<h2>Choose your pizza toppings!!</h2>
+        	<div class="container toppings">
+        		<button class="btn btn-info topping">pepperoni</button>
+        		<button class="btn btn-info topping">mushrooms</button>
+        		<button class="btn btn-info topping">olives</button>
+        		<button class="btn btn-info topping">onions</button>
+        	</div>
         </div>
         <div class="col-md-6">
-          Results
+        	<h2>Your pizza will cost: <span id="results"></span></h2>
         </div>
       </div>
     </div>
