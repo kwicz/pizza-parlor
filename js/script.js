@@ -1,12 +1,15 @@
 // Business Logic
-function Pizza(size){
-	this.size = size;
+function Pizza(){
+	this.size = undefined;
 	this.toppings = [];
 	this.price = 0;
 }
 
 // Determine base cost of pizza based on size
-Pizza.prototype.baseCost = function(pizza) {
+Pizza.prototype.baseCost = function(pizza, pizzaSize) {
+	console.log("pizzaSize: " + pizzaSize);
+	pizza.size = pizzaSize;
+	console.log("pizzaSize: " + pizza.size);
 	if (pizza.size === "small") {
 		pizza.price = 12;
 	} else if (pizza.size === "medium") {
@@ -15,6 +18,7 @@ Pizza.prototype.baseCost = function(pizza) {
 		pizza.price = 24;
 	}
 	console.log("pizzaCost: " + pizza.price);
+	pizza.showCost(pizza);
 }
 
 // Push toppings into pizza toppings array
@@ -33,14 +37,13 @@ Pizza.prototype.showCost = function(pizza) {
 
 // User Logic
 $(document).ready(function() {
-	var pizza = undefined;
+	var pizza = new Pizza;
 
 	// User selects pizza size
 	$(".size").click(function() {
 		var pizzaSize = event.target.id;
-		pizza = new Pizza(pizzaSize);
-		pizza.baseCost(pizza);
-		pizza.showCost(pizza);
+		console.log("pizzaSize: " + pizzaSize);
+		pizza.baseCost(pizza, pizzaSize);
 	});
 
 	// User selects pizza toppings

@@ -1,38 +1,31 @@
+small {
+	text-align: center;
+}
+
 img {
 	height: 112px;
 	width: 112px;
 }
 button {
-	margin: 5px;
+	margin: 3px 0px 0px 0px;
 	text-align: center;
 }
 
-#small {
-	height: 50px;
-	width: 50px;
-}
-
-#medium {
-	height: 100px;
-	width: 100px;
-}
-
-#large {
-	height: 150px;
-	width: 150px;
+.round {
+	border-radius: 3rem;
 }
 
 .smallPizza {
 		border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     background: #ffd867;
     border: 10px solid #ffa600;
 }
 .mediumPizza {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 115px;
+    height: 115px;
     background: #ffd867;
     border: 10px solid #ffa600;
 }
