@@ -8,7 +8,7 @@ function Pizza(){
 }
 
 // Determine base cost of pizza based on size
-Pizza.prototype.baseCost = function(pizza, size) {
+Pizza.prototype.addSize = function(pizza, size) {
 	pizza.size = size;
 	if (pizza.size === "small") {
 		pizza.sizePrice = 12;
@@ -41,6 +41,11 @@ Pizza.prototype.addTopping = function(pizza, topping) {
 	$("#your-toppings").append("<img src='img/" + topping + ".png' alt='" + topping + "'>");
 }
 
+// Remove toppings from pizza toppings array and adjust cost
+Pizza.prototype.removeTopping = function(pizza, topping) {
+
+}
+
 // Output total pizza cost to the DOM
 Pizza.prototype.showCost = function(pizza) {
 	pizza.totalPrice = pizza.sizePrice + pizza.toppingsPrice;
@@ -55,13 +60,7 @@ $(document).ready(function() {
 	// User selects pizza size
 	$(".size").click(function() {
 		var pizzaSize = event.target.id;
-		pizza.baseCost(pizza, pizzaSize);
-	});
-
-	// User selects pizza toppings
-	$(".topping").click(function() {
-		var topping = $(this).val();
-		pizza.addTopping(pizza, topping);
+		pizza.addSize(pizza, pizzaSize);
 	});
 
 	// User removes pizza sizes from order list
@@ -70,9 +69,17 @@ $(document).ready(function() {
 		pizza.removeSize(pizza, size);
 	});
 
-	// User removes toppings from order
-	// $("#your-toppings").click(function(){
+	// User selects pizza toppings
+	$(".topping").click(function() {
+		var topping = $(this).val();
+		pizza.addTopping(pizza, topping);
+	});
 
-	// })
+	// User selects toppings to remove from order
+	$("#your-toppings").on("click", function(){
+		var topping = event.target.alt;
+		$(this).addClass("hidden");
+		pizza.removeTopping(pizza, topping);
+	})
 
 });
