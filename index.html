@@ -27,7 +27,6 @@
 	      		<h2>Pizza Options</h2>
 	      		<h5>Click to add to your order</h5>
 	      		<hr>
-	      		
 	      		<div class="container-fluid crustSizes">
 	      		<h3>First, choose your pizza size:</h3>
 	        		<button class="smallPizza size" id="small">8"</button>
@@ -93,14 +92,16 @@
         	<h2>Your Pizza</h2>
         	<h5>Click to remove from your order</h5>
         	<hr>
-	        <h3>Total Cost: <span id="results">$0.00</span></h3>
-	        <div class="container-fluid your-pizza">
-        		<button class="hidden smallPizza size selected" id="your-small" value="small">8"</button>
-        		<button class="hidden mediumPizza size selected" id="your-medium" value="medium">12"</button>
-        		<button class="hidden largePizza size selected" id="your-large" value="large">14"</button>
-	        </div>
-	        <div id="your-toppings"></div>
-  				<button id="order" type="button" class="btn btn-danger round hidden" data-toggle="modal" data-target="#myModal">Order this pizza?</button>
+        	<div class="container-fluid userOrder">
+		        <h3>Total Cost: <span id="results">$0.00</span></h3>
+		        <div class="container-fluid your-pizza">
+	        		<button class="hidden smallPizza size selected" id="your-small" value="small">8"</button>
+	        		<button class="hidden mediumPizza size selected" id="your-medium" value="medium">12"</button>
+	        		<button class="hidden largePizza size selected" id="your-large" value="large">14"</button>
+		        </div>
+		        <div id="your-toppings"></div>
+	  				<button id="order" type="button" class="btn btn-danger round hidden" data-toggle="modal" data-target="#myModal">Order this pizza?</button>
+	  			</div>
         </div>
       </div>
     </div>
