@@ -29,8 +29,8 @@ Pizza.prototype.addTopping = function(pizza, topping) {
 	var topping = topping;
 	pizza.toppings.push(topping);
 	pizza.toppingsPrice += 1;
-	console.log("topping: " + topping);
-	console.log("pizza.toppings: " + pizza.toppings);
+	pizza.totalPrice += pizza.toppingsPrice;
+	pizza.showCost(pizza);
 }
 
 // Output total pizza cost to the DOM
@@ -58,7 +58,6 @@ $(document).ready(function() {
 		var topping = event.target.id;
 		console.log("topping: " + topping);
 		pizza.addTopping(pizza, topping);
-		pizza.showCost(pizza);
 	});
 
 
