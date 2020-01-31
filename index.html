@@ -24,6 +24,7 @@
       <div class="row">
         <div class="col-md-6">
       		<h2>Pizza Options</h2>
+      		<h5>Click to add to your order</h5>
       		<hr>
       		<h3>Choose your pizza size:</h3>
       		<div class="container-fluid sizes">
@@ -85,14 +86,16 @@
         </div>
         <div class="col-md-6">
         	<h2>Your Pizza</h2>
+        	<h5>Click to remove from your order</h5>
         	<hr>
+	        <h3>Total Cost: <span id="results">$0.00</span></h3>
 	        <div class="container-fluid your-pizza">
-        		<button class="hidden smallPizza size selected" id="small">8"</button>
-        		<button class="hidden mediumPizza size selected" id="medium">12"</button>
-        		<button class="hidden largePizza size sellected" id="large">14"</button>
+        		<button class="hidden smallPizza size selected" id="your-small" value="small">8"</button>
+        		<button class="hidden mediumPizza size selected" id="your-medium" value="medium">12"</button>
+        		<button class="hidden largePizza size selected" id="your-large" value="large">14"</button>
 	        </div>
-	        <h3>Total Cost: <span id="results"></span></h3>
-  				<button type="button" class="btn btn-danger round" data-toggle="modal" data-target="#myModal">Order this pizza?</button>
+	        
+  				<button id="order" type="button" class="btn btn-danger round hidden" data-toggle="modal" data-target="#myModal">Order this pizza?</button>
         </div>
       </div>
     </div>

@@ -21,6 +21,7 @@ button {
     height: 75px;
     background: #ffd867;
     border: 10px solid #ffa600;
+    margin: 5px;
 }
 .mediumPizza {
     border-radius: 50%;
@@ -28,6 +29,7 @@ button {
     height: 115px;
     background: #ffd867;
     border: 10px solid #ffa600;
+    margin: 5px;
 }
 .largePizza {
     border-radius: 50%;
@@ -35,4 +37,5 @@ button {
     height: 150px;
     background: #ffd867;
     border: 10px solid #ffa600;
+    margin: 5px;
 }

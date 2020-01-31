@@ -9,9 +9,7 @@ function Pizza(){
 
 // Determine base cost of pizza based on size
 Pizza.prototype.baseCost = function(pizza, pizzaSize) {
-	console.log("pizzaSize: " + pizzaSize);
 	pizza.size = pizzaSize;
-	console.log("pizzaSize: " + pizza.size);
 	if (pizza.size === "small") {
 		pizza.sizePrice = 12;
 	} else if (pizza.size === "medium") {
@@ -20,8 +18,21 @@ Pizza.prototype.baseCost = function(pizza, pizzaSize) {
 		pizza.sizePrice = 24;
 	}
 	pizza.totalPrice = pizza.sizePrice + pizza.toppingsPrice;
-	console.log("pizzaCost: " + pizza.sizePrice);
 	pizza.showCost(pizza);
+}
+
+// Show user which size was chosen
+Pizza.prototype.displaySize = function(pizza) {
+	size = pizza.size;
+	$("#" + size).addClass("hidden");
+	$("#your-" + size).removeClass("hidden");
+}
+
+// Remove pizza size from user list
+Pizza.prototype.removeSize = function(size) {
+	$("#your-" + size).addClass("hidden");
+	$("#" + size).removeClass("hidden");
+
 }
 
 // Push toppings into pizza toppings array
@@ -39,6 +50,7 @@ Pizza.prototype.showCost = function(pizza) {
 		alert("Choose pizza size first!");
 	} else {
 		$("#results").html("$" + pizza.totalPrice + ".00");
+		$("#order").removeClass("hidden");
 	}
 }
 
@@ -49,16 +61,20 @@ $(document).ready(function() {
 	// User selects pizza size
 	$(".size").click(function() {
 		var pizzaSize = event.target.id;
-		console.log("pizzaSize: " + pizzaSize);
 		pizza.baseCost(pizza, pizzaSize);
+		pizza.displaySize(pizza);
 	});
 
 	// User selects pizza toppings
 	$(".topping").click(function() {
 		var topping = event.target.id;
-		console.log("topping: " + topping);
 		pizza.addTopping(pizza, topping);
 	});
 
+	// User removes pizza sizes from order list
+	$(".selected").click(function(){
+		var size = $(this).val();
+		pizza.removeSize(size);
+	})
 
 });
