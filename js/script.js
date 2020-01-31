@@ -2,7 +2,9 @@
 function Pizza(){
 	this.size = undefined;
 	this.toppings = [];
-	this.price = 0;
+	this.sizePrice = 0;
+	this.toppingsPrice = 0;
+	this.totalPrice = 0;
 }
 
 // Determine base cost of pizza based on size
@@ -11,13 +13,14 @@ Pizza.prototype.baseCost = function(pizza, pizzaSize) {
 	pizza.size = pizzaSize;
 	console.log("pizzaSize: " + pizza.size);
 	if (pizza.size === "small") {
-		pizza.price = 12;
+		pizza.sizePrice = 12;
 	} else if (pizza.size === "medium") {
-		pizza.price = 18;
+		pizza.sizePrice = 18;
 	} else {
-		pizza.price = 24;
+		pizza.sizePrice = 24;
 	}
-	console.log("pizzaCost: " + pizza.price);
+	pizza.totalPrice = pizza.sizePrice + pizza.toppingsPrice;
+	console.log("pizzaCost: " + pizza.sizePrice);
 	pizza.showCost(pizza);
 }
 
@@ -25,14 +28,18 @@ Pizza.prototype.baseCost = function(pizza, pizzaSize) {
 Pizza.prototype.addTopping = function(pizza, topping) {
 	var topping = topping;
 	pizza.toppings.push(topping);
-	pizza.price += 1;
+	pizza.toppingsPrice += 1;
 	console.log("topping: " + topping);
 	console.log("pizza.toppings: " + pizza.toppings);
 }
 
 // Output total pizza cost to the DOM
 Pizza.prototype.showCost = function(pizza) {
-	$("#results").html("$" + pizza.price + ".00");
+	if (pizza.sizePrice = 0) {
+		alert("Choose pizza size first!");
+	} else {
+		$("#results").html("$" + pizza.totalPrice + ".00");
+	}
 }
 
 // User Logic
