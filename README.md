@@ -25,7 +25,7 @@ _This is an online recreation of the classic board game, Tic Tac Toe.  In this g
 |User selects toppings|0 toppings|+ $0|
 ||1 topping|+ $1|
 ||2 toppings|+ $2|
-||||
+|User removes added toppings|click added topping|remove topping and price|
 
 ## Setup/Installation Requirements
 
@@ -62,6 +62,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * jQuery
 * HTML & CSS
 * Bootstrap 3.3.7
+* Images provided by [freepik.com](https://www.freepik.com/free-vector/flat-ingredients-pizza_911168.htm)
 
 ### License
 
