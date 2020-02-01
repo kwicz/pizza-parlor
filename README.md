@@ -46,7 +46,7 @@ _In Terminal:_
 * On Mac: ```open -a {your text editor} pizza-parlor```
 * On Windows: ```pizza-parlor```
 
-_To Download Manually:_
+_Download Manually:_
 
 * Navigate to https://github.com/kwicz/pizza-parlor.
 * Click green "Clone or Download" button.
