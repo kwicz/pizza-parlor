@@ -17,7 +17,7 @@ _This is a website for Pizza.eat(slice), an imagined minimalist pizza parlor whi
 
 ## Project Specifications
 
-| Behavior | Input | Output |
+|Behavior|Input|Output|
 |---|:---:|:---:|
 |User selects pizza size|small|$12|
 ||medium|$18|
