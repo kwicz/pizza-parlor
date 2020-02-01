@@ -50,7 +50,7 @@ _To Download Manually:_
 
 ## Known Bugs
 
-_No known bugs at this time._
+_Pizza customization elements may not appear or may appear too many times when a user adds/deletes elements._
 
 ## Support and contact details
 
