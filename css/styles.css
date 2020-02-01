@@ -9,6 +9,7 @@ img {
 button {
 	margin: 3px 0px 0px 0px;
 	text-align: center;
+	display: inline-block;
 }
 
 .round {
@@ -68,4 +69,12 @@ button {
   margin: 5px;
   border: none;
   line-height: 50%;
+}
+
+.userOrder {
+	text-align: center;
+}
+
+.menu {
+	text-align: center;
 }
