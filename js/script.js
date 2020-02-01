@@ -35,7 +35,7 @@ Pizza.prototype.removeSize = function(pizza, size) {
 // Push toppings into pizza toppings array
 Pizza.prototype.addTopping = function(pizza, topping) {
 	$("#" + topping).addClass("hidden");
-	$("#your-toppings").append("<img src='img/" + topping + ".png' alt='" + topping + "'>");
+	$("#your-toppings").append("<img src='img/" + topping + ".png' alt='" + topping + "' id='" + topping + "'>");
 	pizza.toppings.push(topping);
 	pizza.toppingsPrice++;
 	pizza.showCost(pizza);
@@ -84,8 +84,8 @@ $(document).ready(function() {
 
 	// User selects toppings to remove from order
 	$("#your-toppings").on("click", function(){
-		var topping = event.target.alt;
-		$(this).addClass("hidden");
+		var topping = event.target.id;
+		$("img#" + topping).addClass("hidden");
 		pizza.removeTopping(pizza, topping);
 	})
 
