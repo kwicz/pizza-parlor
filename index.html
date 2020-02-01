@@ -25,13 +25,20 @@
         <div class="col-md-6">
       		<div class="container-fluid">
 	      		<h2>Pizza Options</h2>
-	      		<h5>Click to add to your order</h5>
+	      		<h5>Click items to add to your order</h5>
 	      		<hr>
 	      		<div class="container-fluid crustSizes">
 	      		<h3>First, choose your pizza size:</h3>
 	        		<button class="smallPizza size" id="small">8"</button>
 	        		<button class="mediumPizza size" id="medium">12"</button>
 	        		<button class="largePizza size" id="large">14"</button>
+	      		</div>
+	      		<div class="container-fluid sauces hidden">
+	      		<h3>Second, choose your pizza sauce:</h3>
+	      		<br>
+        		<button class="tomato sauce" id="tomato">Tomato</button>
+        		<button class="alfredo sauce" id="alfredo">Alfredo</button>
+        		<button class="pesto sauce" id="pesto">Pesto</button>
 	      		</div>	
         	</div>
         	<div class="container-fluid toppings hidden">
@@ -90,15 +97,17 @@
         </div>
         <div class="col-md-6">
         	<h2>Your Pizza</h2>
-        	<h5>Click to remove from your order</h5>
+        	<h5>Click items to remove from your order</h5>
         	<hr>
         	<div class="container-fluid userOrder">
 		        <h3>Total Cost: <span id="results">$0.00</span></h3>
-		        <div class="container-fluid your-pizza">
-	        		<button class="hidden smallPizza size selected" id="your-small" value="small">8"</button>
-	        		<button class="hidden mediumPizza size selected" id="your-medium" value="medium">12"</button>
-	        		<button class="hidden largePizza size selected" id="your-large" value="large">14"</button>
-		        </div>
+		        <div class="row">
+				        <div class="container-fluid your-pizza">
+			        		<button class="hidden smallPizza size selected" id="your-small" value="small">8"</button>
+			        		<button class="hidden mediumPizza size selected" id="your-medium" value="medium">12"</button>
+			        		<button class="hidden largePizza size selected" id="your-large" value="large">14"</button>
+				        </div>
+				        <div id="your-sauce"></div>
 		        <div id="your-toppings"></div>
 	  				<button id="order" type="button" class="btn btn-danger round hidden" data-toggle="modal" data-target="#myModal">Order this pizza?</button>
 	  			</div>

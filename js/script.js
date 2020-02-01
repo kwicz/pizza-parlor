@@ -2,6 +2,7 @@
 function Pizza(){
 	this.size = undefined;
 	this.toppings = [];
+	this.sauce = undefined;
 	this.sizePrice = 0;
 	this.toppingsPrice = 0;
 	this.totalPrice = 0;
@@ -20,7 +21,7 @@ Pizza.prototype.addSize = function(pizza, size) {
 	pizza.showCost(pizza);
 	$(".crustSizes").addClass("hidden");
 	$("#your-" + size).removeClass("hidden");
-	$(".toppings").removeClass("hidden");
+	$(".sauces").removeClass("hidden");
 }
 
 // Remove pizza size from user list
@@ -30,6 +31,21 @@ Pizza.prototype.removeSize = function(pizza, size) {
 	$(".toppings").addClass("hidden");
 	pizza.sizePrice = 0;
 	pizza.showCost(pizza);
+}
+
+Pizza.prototype.addSauce = function(pizza, sauce) {
+	$(".sauces").addClass("hidden");
+	$("#your-sauce").append("<button class='" + sauce + "' id='" + sauce + "'>" + sauce + "</button>");
+	$(".toppings").removeClass("hidden");
+	pizza.sauce = sauce;
+}
+
+Pizza.prototype.removeSauce = function(pizza, sauce) {
+	$("." + sauce).addClass("hidden");
+	// $("#sauce").addClass("hidden");
+	$(".toppings").addClass("hidden");
+	$(".sauces").removeClass("hidden");
+	pizza.sauce = undefined;
 }
 
 // Push toppings into pizza toppings array
@@ -76,6 +92,18 @@ $(document).ready(function() {
 		pizza.removeSize(pizza, size);
 	});
 
+  // User selects sauce
+	$(".sauce").click(function() {
+		var sauce = event.target.id;
+		pizza.addSauce(pizza, sauce);
+	});
+
+	// User removes sauce
+	$("#your-sauce").on("click", function(){
+		var sauce = event.target.id;
+		pizza.removeSauce(pizza, sauce);
+	});
+
 	// User selects pizza toppings
 	$(".topping").click(function() {
 		var topping = $(this).val();
@@ -87,6 +115,6 @@ $(document).ready(function() {
 		var topping = event.target.id;
 		$("img#" + topping).addClass("hidden");
 		pizza.removeTopping(pizza, topping);
-	})
+	});
 
 });

@@ -16,26 +16,56 @@ button {
 }
 
 .smallPizza {
-		border-radius: 50%;
-    width: 75px;
-    height: 75px;
-    background: #ffd867;
-    border: 10px solid #ffa600;
-    margin: 5px;
+	border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  background: #ffd867;
+  border: 10px solid #ffa600;
+  margin: 5px;
 }
 .mediumPizza {
-    border-radius: 50%;
-    width: 115px;
-    height: 115px;
-    background: #ffd867;
-    border: 10px solid #ffa600;
-    margin: 5px;
+  border-radius: 50%;
+  width: 115px;
+  height: 115px;
+  background: #ffd867;
+  border: 10px solid #ffa600;
+  margin: 5px;
 }
 .largePizza {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    background: #ffd867;
-    border: 10px solid #ffa600;
-    margin: 5px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background: #ffd867;
+  border: 10px solid #ffa600;
+  margin: 5px;
+}
+
+.tomato {
+  border-radius: 0 0 90px 90px;
+  width: 150px;
+  height: 75px;
+  background: #b30000;
+  margin: 5px;
+  border: none;
+  line-height: 50%;
+}
+
+.alfredo {
+  border-radius: 0 0 90px 90px;
+  width: 150px;
+  height: 75px;
+  background: #fff2e6;
+  margin: 5px;
+  border: none;
+  line-height: 50%;
+}
+
+.pesto {
+  border-radius: 0 0 90px 90px;
+  width: 150px;
+  height: 75px;
+  background: #66cc66;
+  margin: 5px;
+  border: none;
+  line-height: 50%;
 }
