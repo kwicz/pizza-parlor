@@ -78,3 +78,7 @@ button {
 .menu {
 	text-align: center;
 }
+
+.form-group {
+  border-radius: 3rem;
+}

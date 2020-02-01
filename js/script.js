@@ -27,12 +27,14 @@ Pizza.prototype.addSize = function(pizza, size) {
 // Remove pizza size from user list
 Pizza.prototype.removeSize = function(pizza, size) {
 	$(".crustSizes").removeClass("hidden");
+	$(".sauces").addClass("hidden");
 	$("#your-" + size).addClass("hidden");
 	$(".toppings").addClass("hidden");
 	pizza.sizePrice = 0;
 	pizza.showCost(pizza);
 }
 
+// Add sauce to pizza and DOM
 Pizza.prototype.addSauce = function(pizza, sauce) {
 	$(".sauces").addClass("hidden");
 	$("#your-sauce").append("<button class='your-" + sauce + " " + sauce + "' id='" + sauce + "'>" + sauce + "</button>");
@@ -40,6 +42,7 @@ Pizza.prototype.addSauce = function(pizza, sauce) {
 	pizza.sauce = sauce;
 }
 
+// Remove sauce from pizza and DOM
 Pizza.prototype.removeSauce = function(pizza, sauce) {
 	$(".your-" + sauce).addClass("hidden");
 	// $("#sauce").addClass("hidden");
@@ -73,7 +76,9 @@ Pizza.prototype.removeTopping = function(pizza, topping) {
 Pizza.prototype.showCost = function(pizza) {
 	pizza.totalPrice = pizza.sizePrice + pizza.toppingsPrice;
 	$("#results").html("$" + pizza.totalPrice + ".00");
-	$("#order").removeClass("hidden");
+	$("#pick-up").removeClass("hidden");
+	$("#delivery").removeClass("hidden");
+
 }
 
 // User Logic
