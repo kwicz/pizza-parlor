@@ -76,9 +76,7 @@ Pizza.prototype.removeTopping = function(pizza, topping) {
 Pizza.prototype.showCost = function(pizza) {
 	pizza.totalPrice = pizza.sizePrice + pizza.toppingsPrice;
 	$("#results").html("$" + pizza.totalPrice + ".00");
-	$("#pick-up").removeClass("hidden");
-	$("#delivery").removeClass("hidden");
-
+	$(".modal-button").removeClass("hidden");
 }
 
 // User Logic
