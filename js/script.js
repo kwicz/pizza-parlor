@@ -26,9 +26,9 @@ Pizza.prototype.addSize = function(pizza, size) {
 
 // Remove pizza size from user list
 Pizza.prototype.removeSize = function(pizza, size) {
+	$("#your-" + size).addClass("hidden");
 	$(".crustSizes").removeClass("hidden");
 	$(".sauces").addClass("hidden");
-	$("#your-" + size).addClass("hidden");
 	$(".toppings").addClass("hidden");
 	pizza.sizePrice = 0;
 	pizza.showCost(pizza);
@@ -36,8 +36,8 @@ Pizza.prototype.removeSize = function(pizza, size) {
 
 // Add sauce to pizza and DOM
 Pizza.prototype.addSauce = function(pizza, sauce) {
-	$(".sauces").addClass("hidden");
 	$("#your-sauce").append("<button class='your-" + sauce + " " + sauce + "' id='" + sauce + "'>" + sauce + "</button>");
+	$(".sauces").addClass("hidden");
 	$(".toppings").removeClass("hidden");
 	pizza.sauce = sauce;
 }
@@ -45,7 +45,6 @@ Pizza.prototype.addSauce = function(pizza, sauce) {
 // Remove sauce from pizza and DOM
 Pizza.prototype.removeSauce = function(pizza, sauce) {
 	$(".your-" + sauce).addClass("hidden");
-	// $("#sauce").addClass("hidden");
 	$(".toppings").addClass("hidden");
 	$(".sauces").removeClass("hidden");
 	pizza.sauce = undefined;
@@ -97,6 +96,9 @@ $(document).ready(function() {
 
   // User selects sauce
 	$(".sauce").click(function() {
+		if (pizza.sauce) {
+			$(".your-" + pizza.sauce).addClass("hidden");
+		}
 		var sauce = event.target.id;
 		pizza.addSauce(pizza, sauce);
 	});
