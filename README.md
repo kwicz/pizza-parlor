@@ -7,7 +7,7 @@
 
 ## Preview
 
-![Landing Page Preview](pizza-parlor.png)
+![Landing Page Preview](/img/pizza-parlor.png)
 
 **[View Live Preview](https://kwicz.github.io/pizza-parlor)**
 
