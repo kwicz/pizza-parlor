@@ -13,7 +13,7 @@
 
 ## Description
 
-_This is an online recreation of the classic board game, Tic Tac Toe.  In this game, players must alternate selecting a box in a grid, filling it with either X or O, respectively.  The first player to fill 3 boxes in a row with an X or an O is the winner._
+_This is a website for Pizza.eat(slice), an imagined minimalist pizza parlor which accepts online customized pizza orders for pickup or delivery.  With a simple user process and an illustrated menu, users are able to easily manipulate their pizza specifications. While a user is adding or removing their preferences, they will recieve real time total updates on the cost of their pizza._
 
 ## Project Specifications
 
@@ -22,10 +22,17 @@ _This is an online recreation of the classic board game, Tic Tac Toe.  In this g
 |User selects pizza size|small|$12|
 ||medium|$18|
 ||large|$24|
+||size options click off|size of user pizza appears|
+|||sauce options appear|
+|User selects sauce|sauce option|no charge, but encourage sauce|
+||sauce options click off|sauce of user pizza appears|
+|||topping options appear|
 |User selects toppings|0 toppings|+ $0|
 ||1 topping|+ $1|
 ||2 toppings|+ $2|
-|User removes added toppings|click added topping|remove topping and price|
+|User removes an element from the pizza|pizza details clicked off|return to clicked off option set|
+|User chooses pick-up or delivery|"Pick Up" or "Delivery" button click|Modal with with next step appears.|
+
 
 ## Setup/Installation Requirements
 
@@ -62,6 +69,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * jQuery
 * HTML & CSS
 * Bootstrap 3.3.7
+* Google Fonts
 * Images provided by [freepik.com](https://www.freepik.com/free-vector/flat-ingredients-pizza_911168.htm)
 
 ### License

@@ -1,3 +1,14 @@
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.modal-title {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.jumbotron {
+  font-family: 'Josefin Sans', sans-serif;
+}
 
 small {
 	text-align: center;
@@ -15,6 +26,7 @@ button {
 
 .round {
 	border-radius: 3rem;
+  box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.47);
 }
 
 .smallPizza {
@@ -24,6 +36,7 @@ button {
   background: #ffd867;
   border: 10px solid #ffa600;
   margin: 5px;
+  box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.47);
 }
 .mediumPizza {
   border-radius: 50%;
@@ -32,6 +45,7 @@ button {
   background: #ffd867;
   border: 10px solid #ffa600;
   margin: 5px;
+  box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.47);
 }
 .largePizza {
   border-radius: 50%;
@@ -40,6 +54,7 @@ button {
   background: #ffd867;
   border: 10px solid #ffa600;
   margin: 5px;
+  box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.47);
 }
 
 .pomodoro {
@@ -50,6 +65,7 @@ button {
   margin: 5px;
   border: none;
   line-height: 50%;
+  box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.47);
 }
 
 .alfredo {
@@ -60,6 +76,7 @@ button {
   margin: 5px;
   border: none;
   line-height: 50%;
+  box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.47);
 }
 
 .pesto {
@@ -70,6 +87,7 @@ button {
   margin: 5px;
   border: none;
   line-height: 50%;
+  box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.47);
 }
 
 .userOrder {
@@ -82,4 +100,9 @@ button {
 
 .form-group {
   border-radius: 3rem;
+  font-size: 1em;
+}
+
+.topping {
+  box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.47);
 }
