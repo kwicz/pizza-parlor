@@ -35,13 +35,13 @@ Pizza.prototype.removeSize = function(pizza, size) {
 
 Pizza.prototype.addSauce = function(pizza, sauce) {
 	$(".sauces").addClass("hidden");
-	$("#your-sauce").append("<button class='" + sauce + "' id='" + sauce + "'>" + sauce + "</button>");
+	$("#your-sauce").append("<button class='your-" + sauce + " " + sauce + "' id='" + sauce + "'>" + sauce + "</button>");
 	$(".toppings").removeClass("hidden");
 	pizza.sauce = sauce;
 }
 
 Pizza.prototype.removeSauce = function(pizza, sauce) {
-	$("." + sauce).addClass("hidden");
+	$(".your-" + sauce).addClass("hidden");
 	// $("#sauce").addClass("hidden");
 	$(".toppings").addClass("hidden");
 	$(".sauces").removeClass("hidden");
